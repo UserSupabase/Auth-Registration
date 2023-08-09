@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'NunitoBold';
+    src: url("../assets/fonts/Nunitobold.woff2") format("woff2");
+}
+body {
+    background: linear-gradient(to right, #FFFFFB 50%, #F8F8FA 50%);
+    font-family: NunitoBold, sans-serif;
+    color: #636363;
+    font-size: 16px;
+}
+.header {
+    padding: 27px 4px 27px 0;
+    text-align: center;
+}
+.main {
+    padding: 85px 0 191px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 46px 0 63px;
+}
+.main__info {
+    max-width: 452px;
+}
+.main__title {
+    font-size: 36px;
+    color: #000000;
+}
+.main__description {
+    font-size: 22px;
+    line-height: 27px;
+    margin: 14px 0 69px;
+}
+.form__sign-up-field {
+    margin-bottom: 20px;
+}
+.label-text, .label-email, .label-password {
+    font-size: 16px;
+    line-height: 27px;
+    color: #C6C6C4;
+    display: flex;
+    flex-direction: column;
+}
+.input-text, .input-email, .input-password {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: #323232;
+    margin-top: 5px;
+    border-bottom: 1px solid #C6C6C4;
+}
+.input-text::placeholder {
+    color: #323232;
+}
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.input-checkbox {
+    margin: 0 13px 0 3px;
+    outline: none;
+    border: none;
+}
+.form__action {
+    text-align: center;
+}
+.button {
+    background: #DD3142;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.form__button {
+    width: 210px;
+    height: 70px;
+    padding: 21px 68px 25px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+.form__existing-account {
+    text-align: center;
+    margin-top: 44px;
+}
+.form__existing-account__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #636363;
+}
+.main__image {
+    padding-top: 60px;
+}
+.popup {
+    display: none;
+}
+.popup-visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 180px;
+    position: fixed;
+    top: calc(50% - 180px / 2);
+    right: calc(50% - 350px / 2);
+    text-align: center;
+    border: 2px solid #DD3142;
+    background: #fff;
+    padding: 15px;
+    border-radius: 40px;
+    transform: translate(0, -50px);
+    animation: popup 1s ease forwards 1;
+}
+@keyframes popup {
+    from {
+        transform: translate(0, -50px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+.popup__text {
+    font-size: 20px;
+}
+.popup__button {
+    width: 100px;
+    height: 50px;
+    padding: 12px;
+    border-radius: 30px;
+}
+.form__input-error {
+    display: none;
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
